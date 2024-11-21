@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getAllMonkeys } from '../../models/monkeys'
+import ListLink from './ListLink'
 export  function ViewAll() {
 
   const [monkeys, setMonkeys] = useState();
@@ -39,6 +40,17 @@ export  function ViewAll() {
   return (
     <div>
       <h1>view all monkeys</h1>
+      {
+
+        monkeys.map((monkey, index) => (
+          <ListLink key={index}  {...monkey}/>
+        ))
+      }
+<Link to={"/"}>
+<button>home</button>
+</Link>
+
+
     </div>
   )
 }

@@ -70,11 +70,11 @@ exports.updateMonkey = async (req, res, next) => {
             race: req.body.race,
             name: req.body.name,
         }
-        const result = monkeys.findByIdAndUpdate(req.params.id, data)
+        const result = await monkeys.findByIdAndUpdate(req.params.id, data)
         if (result) {
             return res.status(200).send({
                 message: "monkeys  updated",
-                payload: monkeys.findById(req.params.id)
+                payload: result
             })
         }
 
@@ -91,7 +91,7 @@ exports.updateMonkey = async (req, res, next) => {
 
 exports.deleteMonkey = async (req, res, next) => {
     try {
-        const result = monkeys.findByIdAndDelete(req.params.id);
+        const result = await monkeys.findByIdAndDelete(req.params.id);
         if (result) {
             return res.status(200).send({
                 message: "monkeys deleted",
