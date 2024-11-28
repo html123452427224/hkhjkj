@@ -11,7 +11,7 @@ const historickaudalostRouter = require("./routes/historickaudalost")
 const sportovecRouter = require("./routes/sportovec")
 const zivotniProstredi = require("./routes/zivotniprostredi")
 const monkeys = require("./routes/monkeys")
-
+const f1drivers = require("./routes/f1drivers")
 
 const cors = require("cors")
 
@@ -41,6 +41,7 @@ app.use("/athlete", sportovecRouter)
 app.use("/historical-event", historickaudalostRouter)
 app.use("/environment", zivotniProstredi)
 app.use("/monkeys", monkeys)
+app.use("/f1drivers", f1drivers)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

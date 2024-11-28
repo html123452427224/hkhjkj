@@ -1,10 +1,5 @@
-
-
-
-
-
-export const getAllMonkeys = async () => {
-    const req = await fetch("http://localhost:3000/monkeys", {
+export const getAllDrivers = async () => {
+    const req = await fetch("http://localhost:3000/f1drivers", {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -18,8 +13,10 @@ export const getAllMonkeys = async () => {
         payload: data.payload,
     }
 }
-export const getMonkeyById = async (id) => {
-    const req = await fetch(`http://localhost:3000/monkeys/${id}`, {
+
+
+export const getF1driverById = async (id) => {
+    const req = await fetch(`http://localhost:3000/f1drivers/${id}`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -33,8 +30,11 @@ export const getMonkeyById = async (id) => {
         payload: data.payload,
     }
 }
-export const createMonkey = async (formData) => {
-    const req = await fetch(`http://localhost:3000/monkeys/`, {
+
+
+
+export const CreateF1driver = async (formData) => {
+    const req = await fetch(`http://localhost:3000/f1drivers/`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -49,8 +49,10 @@ export const createMonkey = async (formData) => {
         payload: data.payload,
     }
 }
-export const updateMonkey = async (id, formData) => {
-    const req = await fetch(`http://localhost:3000/monkeys/${id}`, {
+
+
+export const updateF1driver = async (id, formData) => {
+    const req = await fetch(`http://localhost:3000/f1drivers/${id}`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -65,8 +67,10 @@ export const updateMonkey = async (id, formData) => {
         payload: data.payload,
     }
 }
-export const deleteMonkey = async (id) => {
-    const req = await fetch(`http://localhost:3000/monkeys/${id}`, {
+
+
+export const deleteF1driver = async (id) => {
+    const req = await fetch(`http://localhost:3000/f1drivers/${id}`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
